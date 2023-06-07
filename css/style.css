@@ -1,0 +1,479 @@
+a {
+  text-decoration: none;
+ }
+ 
+ a:visited {
+  color: #000;
+}
+
+ ul,
+ li {
+  list-style: none;
+ }
+
+li {
+  font-family:"Noto Sans JP";
+ }
+
+ html {
+  scroll-padding-top: 80px; /* 固定ヘッダの高さ分 */
+}
+ 
+ /* header */
+
+ .header {
+   background-color: #FFFEF0;
+   width: 100%;
+   height: 80px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 999;
+ }
+
+.header-title {
+  width: 100px;
+}
+
+.header-title img {
+  display: block;  /*aタグの範囲を広くしている*/
+  width: 100%;
+  height: 100%;
+}
+
+.header-inner {
+  padding: 0 20px; 
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  height: inherit; 
+  position: relative;
+}
+
+/* header nav */
+.header-nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+	transform: translateX(100%); 
+  background-color: #22AC38; /*ハンバーガーメニュークリック時のナビゲーションメニュー背景色*/
+  transition: ease .5s; /*ハンバーガーメニュークリック時のナビゲーションメニュー出現を遅延*/
+}
+
+/* hambuger */
+
+.hamburger {
+  width: 48px;
+  height: 100%;
+  background-color: transparent; 
+  border-color: transparent;
+  z-index: 9999;
+}
+
+/* hamburger span */
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  position: relative;
+  transition: ease .4s; /*クリック時の三本線の動きを0.4秒で実行*/
+  display: block;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  margin: 8px 0;
+}
+
+.hamburger span:nth-child(3) {
+  top: 0;
+}
+
+/* hamburger after click */
+.header-nav.active	{
+  transform: translateX(0);	
+}
+
+.hamburger.active span:nth-child(1)	{
+  top: 7px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2)	{
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3)	{
+  top: -14px;
+  transform: rotate(-45deg);
+}
+/* nav link */
+.nav-items {
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.nav-items li a{
+  color: black;
+  cursor: pointer;
+}
+
+/* hero */
+
+.hero-img {/*親div*/
+  position: relative;/*相対配置*/
+  padding-top: 80px;
+}
+
+.hero-img p {
+  position: absolute;/*絶対配置*/
+  color: #fffef0;
+  font-size: 24px;
+  top: 30%;
+  left: 10%;
+  }
+
+.hero-img img {
+  width: 100%;
+  height: 50vmax;
+}
+
+/* .wrapper   */
+
+.wrapper {
+  background-color: #e9f6f6;
+}
+.wrapper h3 {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 30px;
+}
+.wrapper-item {
+  padding: 10px 0 20px;
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.wrapper-text {
+  padding-top: 8px;
+  margin-left: 5%;
+  line-height:130%;
+  text-align: start;
+}
+
+@media screen and (min-width:769px){
+  .wrapper-item{
+    display: flex;
+  }  
+}
+
+  /* slider */
+.slider {
+  width:94%;
+  margin:0 auto;
+ }
+
+ .slider p {
+  text-align: center;
+  padding: 10px 0;
+ }
+ 
+.slider img {
+  width:100%;
+  height:auto;
+ }
+ 
+ /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+ 
+.slider .slick-slide {
+  margin:0 10px;
+ }
+
+ /*矢印の設定*/
+ /*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+  position: absolute;/*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;/*マウスカーソルを指マークに*/
+  outline: none;/*クリックをしたら出てくる枠線を消す*/
+  border-top: 3px solid #32633A;/*矢印の色*/
+  border-right: 3px solid #32633A;/*矢印の色*/
+  height: 15px;
+  width: 15px;
+ }
+ 
+.slick-prev {/*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+ }
+ 
+.slick-next {/*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+ }
+ 
+ /*ドットナビゲーションの設定*/
+ 
+.slick-dots {
+  text-align:center;
+  margin:20px 0 0 0;
+ }
+ 
+.slick-dots li {
+  display:inline-block;
+  margin:0 5px;
+ }
+ 
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width:15px;/*ドットボタンのサイズ*/
+  height:10px;/*ドットボタンのサイズ*/
+  display:block;
+  border-radius:50%;
+  background:#FFFEF0;/*ドットボタンの色*/
+ }
+ 
+ .slick-dots .slick-active button{
+  background:#22AC38;/*ドットボタンの現在地表示の色*/
+ }
+ 
+ /*========= レイアウトのためのCSS ===============*/
+
+h2 {
+  text-align:center;
+  padding:10px;
+  margin: 10px;
+  font-size: large;
+}
+  
+ a:hover {
+  opacity: 70%;
+ }
+
+/* info */
+
+.info{
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+.info img{
+  border-radius: 50%;
+  width:100px;
+  margin-right: 40px;
+}
+
+.info-text p {
+  width: 250px;
+  padding: 8px;
+}
+
+.marker {
+  background: linear-gradient( transparent 50%, yellow 50%);
+}
+
+.info-text__box {
+  width: 100%;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* video */
+
+.wrap-video{
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+/* footer */
+
+ .footer {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  background-color: #FFFEF0;
+ }
+
+ .footer-contact  p{
+  line-height: 130%;
+  font-size: small;
+ }
+
+ .footer-icon {
+  color: #000;
+ }
+
+.footer-icon a :hover{
+  opacity: 80%;
+}
+
+.footer-icon i{
+  width: 50px;
+  height: 50px;
+  padding-top: 25px;
+  margin-left: 15px;
+}
+
+.contact {
+  margin-top: 5px;
+}
+
+.footer small {
+  padding:  auto ;
+  color: #32633A;
+}
+
+
+/* faq */
+
+.fap-title {
+  padding-top: 95px;
+  background-color: #22AC38;
+  height: 30px;
+}
+
+.fap-title p {
+  margin-left: 30px;
+  font-size: large;
+  color: #FFFEF0;
+  font-weight: bold;
+}
+.faq-container {
+  margin: 50px auto 30px;
+  width: 80%;
+  }
+  
+.faq:not(:first-child) {
+  margin-top: 10px;
+  }
+  
+.faq-title {
+  background: #e9f6f6;
+  cursor: pointer;
+  font-size: medium;
+  padding: 20px 40px;
+  position: relative;
+  }
+  
+.faq-title:after {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 35%;
+  right: 22px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #32633A;
+  border-right: 2px solid #32633A;
+  transform: rotate(135deg);
+  transition: all .3s ease-in-out;
+  }
+  
+.faq-title.open:after {
+  transform: rotate(-45deg);
+  top: 45%;
+  }
+  
+.faq-text {
+  background-color:#FFFEF0;
+  display: none;
+  padding: 20px 40px;
+  }
+
+/* btn */
+.btn {
+  display: block;
+  position: absolute;
+  left: 45%;
+  bottom: 10%;
+  width: 80px;
+  height: 30px;
+  border:none;
+  background-color: #22AC38;
+  color: #FFFEF0;
+  font-weight: bold;
+  border-radius: 80%;
+  cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 960px){
+ .hero-img  {
+    margin: 0 auto;
+    }
+  }
+
+@media screen and (min-width: 960px){
+  .nav-items{
+  display: unset;
+  flex-direction: unset;
+  gap: unset;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header-title {
+    width: 120px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header-nav {
+    position: static;
+    transform: initial;
+    background-color: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: end;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .nav-items {
+    position: inherit;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: initial;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .nav-items li a {
+    margin-bottom: 0;
+  }
+}
