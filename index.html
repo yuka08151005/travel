@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>travel</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="https://kit.fontawesome.com/f3bfe75d30.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+  <!--defer=HTMLが先、後で読ませる-->
+  <script src="JS/common.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="header-title"><a href="#"><img src="img/logo02.png" alt="ロゴ画像"></a></h1>
+      <nav class="header-nav nav" id="js-nav">
+        <ul class="nav-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="domestic/index.html">国内</a></li>
+          <li><a href="abroad/index.html">海外</a></li>
+          <li><a href="extra/index.html">番外編</a></li>
+          <li><a href="faq/index.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section class="section1">
+      <div class="hero-img">
+        <img src="img/hero.png" alt="台湾九分の写真">
+        <p>旅は、自身の新しい発見</p>
+      </div>
+    </section>
+    <section class="section2">
+      <h2>一度は訪れてほしい街のご案内</h2>
+      <ul class="slider">
+        <li>
+          <p>沖縄 首里城</p><a href="domestic/index.html#okinawa"><img src="img/okinawa01.png" alt="沖縄"></a>
+        </li>
+        <li>
+          <p>北海道 小樽運河</p><a href="domestic/index.html#otaru"><img src="img/otaru01.png" alt="小樽"></a>
+        </li>
+        <li>
+          <p>島根 出雲大社</p><a href="domestic/index.html#izumo"><img src="img/izumo01.png" alt="出雲"></a>
+        </li>
+        <li>
+          <p>セブ島 砂浜</p><a href="abroad/index.html#sebu"><img src="img/cebu01.png" alt="セブ島"></a>
+        </li>
+        <li>
+          <p>インドネシア 水田</p><a href="abroad/index.html#indoneshia"><img src="img/Indonesia01.png" alt="インドネシア"></a>
+        </li>
+        <li>
+          <p>台湾 自由広場</p><a href="abroad/index.html#taiwan"><img src="img/taiwan01.png" alt="台湾"></a>
+        </li>
+      </ul>
+    </section>
+    <section class="section3">
+      <h2>旅に関するお知らせ</h2>
+      <div class="info">
+        <img src="img/infomation.png" alt="案内人">
+        <div class="info-text" id="window">
+          <div class="info-text__box">
+            <p><a href="#window" target="window_name" onClick="disp('window/index.html')"><span class="marker">インドネシアの風景 ※動画あり</span></a></p>
+            <a href="faq/index.html">
+              <p>旅に関するお問合せ先について</p>
+            </a>
+            <p>渡航状況について</p>
+            <p>旅行券取り扱いについて</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="footer-contact">
+        <a href="#"><img src="img/logo02.png" alt="ロゴ画像" width="150px" height="auto"></a>
+        <p>ご予約・お問合せは下記SNS<br>または、メールにてお問い合わせください。</p>
+      </div>
+      <div class="footer-icon">
+        <a href="https://ja-jp.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+        <a href="https://twitter.com/?lang=ja" target="_blank"><i class="fa-brands fa-square-twitter fa-2x"></i></a>
+        <a href="mailto:xxx@co.com" target="_blank"><i class="fa-solid fa-envelope fa-2x" style="color:#000;"></i></a>
+        <a href="img/higaeri.pdf" target="_blank"><i class="fa-solid fa-file-pdf fa-2x" style="color:#000;"></i></a>
+      </div>
+      <small>2022(c)Copyright</small>
+    </div>
+  </footer>
+</body>
+
+</html>
